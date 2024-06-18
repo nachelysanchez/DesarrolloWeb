@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cálculo de calificaciones para UAPA</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .formulario {
+            width: 300px;
+            padding: 16px;
+            border: 1px solid #ccc;
+            margin: auto;
+        }
+        .input-group {
+            margin-bottom: 8px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 4px;
+        }
+        .input-group input {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input-group input[type="button"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .formulario h4{
+            color: chocolate;
+        }
+        .text-center{
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #FFF;
+            text-align: center;
+            padding: 5px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="formulario">
+            <form>
+                <h4 class="text-center"><strong>Calcula la calificación final de tu estudiante UAPA</strong></h4>
+                <div class="input-group">
+                <label for="semanales">Actividades semanales [0-30]</label>
+                <input type="number" id="semanales" name="semanales" required/>
+                </div>
+                
+                <div class="input-group">
+                <label for="valores">Actitudes y Valores [0-5]</label>
+                <input type="number" id="valores" name="valores" required/>
+                </div>
+
+                <div class="input-group">
+                <label for="final">Evaluación final [0-40]</label>
+                <input type="number" id="final" name="final" required/>
+                </div>
+
+                <div class="input-group">
+                    <label for="trabajo">Trabajo de Investigación [0-15]</label>
+                    <input type="number" id="trabajo" name="trabajo" required/>
+                </div>
+
+                <div class="input-group">
+                    <label for="participacion">Participación oral y escrita [0-10]</label>
+                    <input type="number" id="participacion" name="participacion" required/>
+                </div>
+
+                <div class="input-group">
+                    <input type="button" value="Calcular" onclick="calcular()"/>
+                    <label style="color: red;" id="error"></label>
+                    <h5><strong>La calificación final es:</strong></h5>
+                    <h5 style="color: darkcyan;" id="calificacionF"></h5>
+                </div>
+            </form>
+        </div>
+    </body>
+    <footer>
+        <p>Nachely Sánchez - 100046842</p>
+    </footer>
+    <script src="app.js"></script>
+</html>
